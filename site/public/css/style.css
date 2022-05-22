@@ -9,8 +9,8 @@ body {
 
 .container {
   width: 80%;
-  margin: auto;
   display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -19,16 +19,18 @@ body {
 
 .header .container {
   justify-content: space-between;
+  align-items: center;
 }
+
 
 .header a {
   text-decoration: none;
   color: #3D597D;
+  cursor: pointer;
+  font-weight: 600;
+  align-items: center;
 }
 
-.agora {
-  font-weight: 800;
-}
 
 .navbar {
   width: 300px;
@@ -39,20 +41,13 @@ body {
   color: #3D597D;
 }
 
-
-.titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
-}
-
-
 /* BANNER */
 
 .banner {
-  height: fit-content;
-  padding: 80px 0;
+  height: 100%;
+  padding: 10% 0;
   color: white;
+  background-color: white;
   background-image: url(".././assets/imgs/capa.jpg");
   background-size: cover;
   border-bottom: 5px solid #3D597D;
@@ -65,7 +60,7 @@ body {
   align-items: center;
 }
 
-.tamanho-conteudo { 
+.tamanho-conteudo {
   height: fit-content !important;
 }
 
@@ -86,57 +81,91 @@ body {
 .social {
   background-color: white;
   display: flex;
-}
-
-.social .container{
+  border-bottom: 5px solid #3D597D;
+  padding-bottom: 7px;
   justify-content: center;
 }
 
-.box img {
-  width: 35vw;
+.social .container {
+  justify-content: center;
+}
+
+
+.box1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.box1 .colagem {
+  height: 100%;
 }
 
 .social .container .boxes {
   display: flex;
+  justify-content: center;
+
 }
+
 
 .texto1 {
   text-align: center;
   font-size: 20px;
+  justify-items: center;
+  margin-left: 10px;
 }
 
-
-.box {
-  margin: 10px;
+.box2 {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: justify;
+  justify-content: center;
 }
 
+/* CARROSSEL - FILMES */
 
-.box {
-  margin-top: 50px;
+.carrossel {
+  height: 40%;
+  width: 40%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: white;
+  justify-items: baseline;
 }
 
+.cont img {
+  object-fit: cover;
+  height: 40%;
+  width: 40%;
+  display: inline-block;
+  scroll-snap-align: start;
+  pointer-events: none;
 
+}
 
+.cont {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
 
 /* FOOTER */
 
 .footer {
-  background-color: white;
+  background-color: #3D597D;
   height: 100%;
-  color: #3D597D;
+  color: white;
   display: flex;
   font-size: 15px;
-  border-top: 5px solid #3D597D;;
+  border-top: 5px solid #3D597D;
 }
 
 .footer .container {
   justify-content: center;
+  text-align: center;
 }
 
 
@@ -176,7 +205,7 @@ button {
 
 /* FORMULARIO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
 }
@@ -193,7 +222,7 @@ button {
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }
@@ -340,14 +369,4 @@ input {
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
-}
-
-/* pagina extra - simulador */
-.simulador {
-  color: white;
-
-}
-
-.simulador .container {
-  flex-direction: column
 }

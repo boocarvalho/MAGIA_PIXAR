@@ -14,24 +14,17 @@ CREATE TABLE votacao (
 );
 
 
-create table filmes (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
-);
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
 
 create table votos (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
+	primeiro DECIMAL,
+	segundo DECIMAL,
+	terceiro DECIMAL,
 	momento DATETIME,
-	fk_filme INT,
-	FOREIGN KEY (fk_filme) REFERENCES filmes(id)
+	fk_voto INT,
+	FOREIGN KEY (fk_voto) REFERENCES votacao(id)
 );
 
 

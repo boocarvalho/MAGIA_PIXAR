@@ -2,26 +2,19 @@
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+CREATE DATABASE pixar;
 
-USE acquatec;
+USE pixar;
 
-CREATE TABLE usuario (
+CREATE TABLE votacao (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	filme VARCHAR(50)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
 
-create table aquario (
+create table filmes (
 /* em nossa regra de negócio, um aquario tem apenas um sensor */
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	descricao VARCHAR(300)
@@ -29,7 +22,7 @@ create table aquario (
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
 
-create table medida (
+create table votos (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	dht11_umidade DECIMAL,
 	dht11_temperatura DECIMAL,
@@ -37,8 +30,8 @@ create table medida (
 	lm35_temperatura DECIMAL,
 	chave TINYINT,
 	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
+	fk_filme INT,
+	FOREIGN KEY (fk_filme) REFERENCES filmes(id)
 );
 
 

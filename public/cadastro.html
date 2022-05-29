@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AcquaTec | Cadastro</title>
+    <title>Magia Pixar | Votação</title>
 
 
     <script src="./js/funcoes.js"></script>
 
 
-    <link rel="icon" href="./assets/icon/favicon.ico">
+    <link rel="icon" href="./assets/icon/icon_pixar.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -25,7 +25,6 @@
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <h1 class="titulo">AcquaTec</h1>
             <ul class="navbar">
                 <li>
                     <a href="./index.html">
@@ -70,13 +69,11 @@
                     <span class="tipo_campo">E-mail:</span>
                     <input id="email_input" type="text" placeholder="meuemail@provedor.com">
 
-                    <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
+                    <span class="tipo_campo">Seu filme favorito da PIXAR:</span>
+                    <input id="filme_input" type="text" placeholder="Informe o filme">
 
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
-
-                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
+                    
+                    <button class="btn" onclick="cadastrar()">Cadastrar voto</button>
 
                 </div>
                 <div id="div_aguardar" class="loading-div">
@@ -111,10 +108,9 @@
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
-
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        var filmeVar = filme_input.value;
+        
+        if (nomeVar == "" || emailVar == "" || filmeVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -136,7 +132,7 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                filmeServer: filmeVar
             })
         }).then(function (resposta) {
 
@@ -145,10 +141,10 @@
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Voto cadastrado com sucesso! Redirecionando para tela de inicio...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
+                    window.location = "index.html";
                 }, "2000")
                 
                 limparFormulario();

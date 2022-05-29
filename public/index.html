@@ -21,7 +21,7 @@
 <body>
     <div class="header">
         <div class="container">
-            <img src="./assets/imgs/logopixar.png" style="height:16vh">
+            <img src="./assets/imgs/logopixar.png" style="height: 80px">
             <ul class="navbar">
                 <li class="agora">Inicial</li>
                 <li>
@@ -58,18 +58,30 @@
         </div>
     </div>
 
-    <div class="cont">
-        <div id="img"><img src="./assets/imgs/up.jpg"></div>
-        <div id="img"><img src="./assets/imgs/monstros sa.jpg"></div>
-        <div id="img"><img src="./assets/imgs/toystory.jpg"></div>
-        <div id="img"><img src="./assets/imgs/vidadeinseto.jpg"></div>
-        <div id="img"><img src="./assets/imgs/divertamente.jpg"></div>
-        <div id="img"><img src="./assets/imgs/doisirmaos.jpg"></div>
-        <div id="img"><img src="./assets/imgs/luca.png"></div>
-        <div id="img"><img src="./assets/imgs/nemo.jpg"></div>
-        <div id="img"><img src="./assets/imgs/viva.jpg"></div>
+    <div class="sinopse">
+        <div id="img_up"><img src="./assets/imgs/sinopse_up.png"></div>
+        
 
     </div>
+
+    <div class="cont">
+        <div onclick="altas()" id="img"><img src="./assets/imgs/up.jpg"></div>
+        <div onclick="sa()" id="img"><img src="./assets/imgs/monstros sa.jpg"></div>
+        <div onclick="toy()" id="img"><img src="./assets/imgs/toystory.jpg"></div>
+        <div onclick="inseto()" id="img"><img src="./assets/imgs/vidadeinseto.jpg"></div>
+        <div onclick="divertida()" id="img"><img src="./assets/imgs/divertamente.jpg"></div>
+        <div onclick="irmaos()" id="img"><img src="./assets/imgs/doisirmaos.jpg"></div>
+        <div onclick="luca()" id="img"><img src="./assets/imgs/luca.png"></div>
+        <div onclick="nemo()" id="img"><img src="./assets/imgs/nemo.jpg"></div>
+        <div onclick="viva()" id="img"><img src="./assets/imgs/viva.jpg"></div>
+
+    </div>
+
+
+
+    
+
+
 
 
     <!--footer inicio-->
@@ -94,4 +106,9 @@
                 event.target.scrollBy(1280, 0)
             }
         })
+
+        function altas(){
+            img_up.style.display='flex'
+        }
+
 </script>

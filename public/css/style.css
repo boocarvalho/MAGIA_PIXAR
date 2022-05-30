@@ -191,12 +191,12 @@ body {
 /* LOGIN */
 
 .banner .container .card {
-  background-color: #e5e5e583;
+  background-color: #3d597d8f;
   height: fit-content;
   width: 400px;
   display: flex;
   flex-direction: column;
-  color: #3D597D;
+  color: white;
   align-items: center;
   border-radius: 15px;
 }
@@ -403,4 +403,74 @@ input {
 
 
 
-/* DAASHBOARD */
+/* QUIZ */
+
+.container_2 {
+  width: 55vw;
+  height: 80vh;
+  border-radius: 40px;
+  background-color: #3d597d8f;
+  border: 1px white solid;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  padding-bottom: 4%;
+}
+
+.questionario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/imgs/capa.jpg");
+  background-size: cover;
+}
+
+.pergunta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 35%;
+  background-color: #FFFBFC;
+  border-radius: 20px;
+  margin-top: 2%;
+}
+
+.opt {
+  width: 80%;
+  height: 12%;
+  background-color: #FFFBFC;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.box-btn {
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.questao {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  ;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 8%;
+}
+
+.alternativa {
+  font-size: 24px;
+  text-align: center;
+  margin: 3%;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  ;
+}

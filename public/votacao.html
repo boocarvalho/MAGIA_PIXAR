@@ -30,15 +30,9 @@
             <ul class="navbar">
                 <li><a href="./index.html">Inicial</a></li>
                 
-                <li class="agora">
-                    <a href="">Ranking</a>
-                </li>
-
                 <li>|</li>
 
-                <li>
-                    <a href="./votacao.html">Votação</a>
-                </li>
+                <li><a href="./votacao.html">Votação</a></li>
 
             </ul>
         </div>
@@ -111,13 +105,13 @@
         
         if (nomeVar == "" || emailVar == "" || filmeVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "(Por gentileza, preencha os campos corretamente)";
 
             finalizarAguardar();
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            setInterval(sumirMensagem, 3000)
         }
 
         // Enviando o valor da nova input

@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
   background-color: white;
 }
 
@@ -147,28 +148,28 @@ body {
   white-space: nowrap;
 }
 
-.cont img{
+.cont img {
   height: 400px;
   cursor: pointer;
 }
 
 /* SINOPSES DOS FILMES */
 
-.sinopse{
+.sinopse {
   background-color: rgba(255, 255, 255, 0.829);
-  width: 100%;
-  height: 20%;
-  display:none;
-  justify-content: center;
+  width: 100vw;
+  height: 52vh;
+  display: none;
   position: absolute;
-
-
+  justify-content: center;
 }
 
-#img_up{
-  display: flex;
+.sinopse img {
   height: 100%;
+  justify-content: center;
 }
+
+
 
 
 
@@ -243,7 +244,7 @@ button {
   border-radius: 4px;
   border: #e6005a 3px solid;
   padding: 10px;
- 
+
 }
 
 

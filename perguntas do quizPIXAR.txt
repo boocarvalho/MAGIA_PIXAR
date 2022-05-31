@@ -1,0 +1,69 @@
+vetor
+if
+for
+json
+function 
+
+
+
+
+1 pergunta 
+
+O curta-metragem que tornou a pixar conhecida por todos foi "Luxo Jr", que conta a história de dois abajures e uma pequena bola de borracha. 
+
+Verdadeiro 
+Falso 
+
+
+Contexto: Correta. 
+"Luxo Jr" (1986), criado por John Lasseter foi lançado após a empresa ter sido comprada por Steve Jobs, na época o resultado foi tão bom que o abajur tornou-se o símbolo da empresa.
+
+
+
+2 pergunta
+
+"Toy Story 2" quase foi cancelado
+
+Verdadeiro 
+Falso
+
+Contexto: Correta.
+Em 1998, um dos animadores acidentalmente apagou alguns arquivos dos servidores da Pixar durante o processo final de edição do filme.
+
+
+
+3 pergunta
+
+Buzz Lightyear não foi o primeiro nome pensado para o famoso personagem de "Toy Story". 
+
+Verdadeiro 
+Falso
+
+
+Contexto: Correta.
+Inicialmente ele se chamaria Lunar Larry, porém a produção acabou se inspirando no astronauta da Apllo 11, Buzz Aldrin, para batizar o pequeno herói
+
+
+4 pergunta
+
+Pixar já construiu seu próprio computador.
+
+Verdadeiro 
+Falso
+
+Contexto: Antes de se tornar um estúdio de animação, a empresa criava hardwares, computadores de alta performance para aplicações específicas.Sendo utilizado para informatizar o processo de pintura e cores dos filmes e desenhos Disney.
+
+
+5 pergunta
+
+Steve Jobs já foi dono do estúdio PIXAR.
+
+Verdadeiro
+Falso
+
+Contexto: Verdadeiro
+Criada em 1979, a Pixar só virou um sucesso depois que Steve Jobs comprou o estúdio em 1986. Na ocasião, o fundador da Apple pagou US $5 milhões pela empresa e se tornou seu maior acionista.
+
+
+
+

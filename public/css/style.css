@@ -48,7 +48,7 @@ body {
   justify-content: space-between;
   list-style: none;
   color: #3D597D;
-  margin-right: 10;
+  margin-right: 10%;
 }
 
 /* BANNER */
@@ -107,6 +107,10 @@ body {
   align-items: center;
 }
 
+.colagem{
+margin-left:25%;
+}
+
 
 .box1 .colagem {
   height: 100%;
@@ -120,12 +124,13 @@ body {
 }
 
 .box2 {
-  margin-top: 10px;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: justify;
   justify-content: center;
+  margin: 10%;
 }
 
 .texto1 {

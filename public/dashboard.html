@@ -59,7 +59,7 @@
                
             </div>
             <div class="graph">
-                <canvas id="canvas_grafico" style="width:50vw; height: 50vh;"></canvas>
+                <canvas id="canvas_grafico" style="width:40vw; height: 30vh;"></canvas>
             </div>
         </div>
     </div>
@@ -231,12 +231,12 @@
                     window.grafico_linha.update();
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                     proximaAtualizacao = setTimeout(() => atualizarGrafico(filme, dados), 7000); 
+                     proximaAtualizacao = setTimeout(() => atualizarGrafico(filme, dados), 2000); 
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(filme, dados), 7000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(filme, dados), 2000);
             }
         })
             .catch(function (error) {

@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -48,6 +48,7 @@ body {
   justify-content: space-between;
   list-style: none;
   color: #3D597D;
+  margin-right: 10;
 }
 
 /* BANNER */

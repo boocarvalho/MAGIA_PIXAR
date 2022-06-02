@@ -65,6 +65,7 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var filme = req.body.filmeServer;
+    
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -74,7 +75,7 @@ function cadastrar(req, res) {
     } else if (filme == undefined) {
         res.status(400).send("Seu voto está undefined!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, email, filme)
             .then(

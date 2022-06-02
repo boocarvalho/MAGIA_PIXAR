@@ -17,10 +17,9 @@ CREATE TABLE votacao (
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
 
-CREATE TABLE diretor (
+CREATE TABLE usuario (
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR (50),
-dtNascimento DATE,
 filme VARCHAR (50)
 );
 

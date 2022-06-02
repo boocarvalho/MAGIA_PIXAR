@@ -136,7 +136,7 @@
                     yAxisID: 'y-temperatura',
                     label: 'Votação',
                     borderColor: '#FFF',
-                    backgroundColor: 'rgb(240, 160, 209)',
+                    backgroundColor: ['rgb(240, 160, 209)', 'rgb(192, 46, 136)', 'rgb(202, 17, 131)', 'rgb(194, 101, 158)','rgb(211, 172, 196)','rgb(196, 42, 137)','rgb(233, 10, 148)','rgb(248, 88, 187)','rgb(212, 132, 182)','rgb(218, 42, 150)'],
                     fill: true,
                     data: []
                 }
@@ -153,7 +153,7 @@
         console.log(JSON.stringify(dados));
 
         var ctx = canvas_grafico.getContext('2d');
-        window.grafico_linha = Chart.Bar(ctx, {
+        window.grafico_linha = Chart.Doughnut(ctx, {
             data: dados,
             options: {
                 responsive: true,

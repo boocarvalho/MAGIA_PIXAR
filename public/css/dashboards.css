@@ -112,6 +112,7 @@ body {
 .dash {
   width: 75%;
   position: relative;
+  display: flex;
   top: 0;
   left: 25%;
   background-color: #161618;
@@ -152,6 +153,12 @@ body {
 .ideal {
   background-color: #9ccc65;
 }
+
+ #canvas_graficos{
+  background-color: blue;
+  width: 400px;
+  height: 400px;
+} 
 
 .item-regua {
   padding: 5px;

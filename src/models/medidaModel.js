@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idVotacao, limite_linhas) {
+function buscarUltimasMedidas(filme, limite_linhas) {
 
     instrucaoSql = ''
 
@@ -15,13 +15,10 @@ function buscarUltimasMedidas(idVotacao, limite_linhas) {
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
-        primeiro as primeiro voto, 
-        segundo as segundo voto,
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from votos
-                    where fk_voto = ${idVotacao}
-                    order by id desc limit ${limite_linhas}`;
+            filme, 
+            count(filme) as votos 
+                from votacao 
+                group by filme;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -31,7 +28,7 @@ function buscarUltimasMedidas(idVotacao, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idVotacao) {
+function buscarMedidasEmTempoReal(filme) {
 
     instrucaoSql = ''
 
@@ -46,12 +43,10 @@ function buscarMedidasEmTempoReal(idVotacao) {
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
-        primeiro as primeiro voto, 
-        segundo as segundo voto,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_voto
-                        from votos where fk_voto = ${idVotacao} 
-                    order by id desc limit 1`;
+        filme, 
+        count(filme) as votos 
+            from votacao 
+            group by filme;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

@@ -25,11 +25,11 @@
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <a href="./index.html"><img src="./assets/imgs/logopixar.png" style="height: 80px"></a> 
+            <a href="./index.html"><img src="./assets/imgs/logopixar.png" style="height: 80px"></a>
 
             <ul class="navbar">
                 <li><a href="./index.html">Inicial</a></li>
-                
+
                 <li>|</li>
 
                 <li><a href="./votacao.html">Votação</a></li>
@@ -37,6 +37,11 @@
                 <li>|</li>
 
                 <li><a href="quiz-questao1.html">Quiz</a></li>
+
+                <li>|</li>
+
+                <li><a href="dashboard.html">Gráficos</a></li>
+
 
             </ul>
         </div>
@@ -66,10 +71,25 @@
                     <span class="tipo_campo">E-mail:</span>
                     <input id="email_input" type="text" placeholder="meuemail@provedor.com">
 
+                    <select id="sel_filmes">
+                        <option value=""></option>
+                        <option value="UP - Altas Aventuras">Up - Altas Aventuras</option>
+                        <option value="Monstros S.A">Monstros S.A.</option>
+                        <option value="Toy Story">Toy Story</option>
+                        <option value="Vida de Inseto">Vida de Inseto</option>
+                        <option value="Divertidamente">Divertidamente</option>
+                        <option value="Dois Irmãos">Dois Irmãos</option>
+                        <option value="Luca">Luca</option>
+                        <option value="Procurando Nemo">Procurando Nemo</option>
+                        <option value="Viva - A vida é uma festa">Viva - A vida é uma festa</option>
+
+                    </select>
+
+
                     <span class="tipo_campo">Seu filme favorito da PIXAR:</span>
                     <input id="filme_input" type="text" placeholder="Informe o filme">
 
-                    
+
                     <button class="btn" onclick="cadastrar()">Cadastrar voto</button>
 
                 </div>
@@ -106,7 +126,7 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var filmeVar = filme_input.value;
-        
+
         if (nomeVar == "" || emailVar == "" || filmeVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Por gentileza, preencha os campos corretamente)";
@@ -143,7 +163,7 @@
                 setTimeout(() => {
                     window.location = "index.html";
                 }, "2000")
-                
+
                 limparFormulario();
                 finalizarAguardar();
             } else {

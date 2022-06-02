@@ -277,7 +277,7 @@ input {
 .btn {
   font-family: "Barlow", sans-serif;
   border: 0;
-  border-radius: 5px;
+  border-radius: 15px;
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
@@ -287,6 +287,7 @@ input {
   align-self: center;
   margin-top: 5px;
   cursor: pointer;
+  border: 1px white solid;
 }
 
 .loading-div {
@@ -323,8 +324,8 @@ input {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid #233f64;
+  background-color: #3D597D;
   /* border: 3px solid pink; */
 }
 
@@ -406,7 +407,7 @@ input {
 /* QUIZ */
 
 .container_2 {
-  width: 55vw;
+  width: 35vw;
   height: 80vh;
   border-radius: 40px;
   background-color: #3d597d8f;
@@ -459,9 +460,8 @@ input {
 
 .questao {
   text-align: center;
-  font-size: 2em;
+  font-size: 20px;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  ;
   margin-left: 3%;
   margin-right: 3%;
   margin-top: 8%;

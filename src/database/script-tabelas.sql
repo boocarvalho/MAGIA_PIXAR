@@ -17,14 +17,11 @@ CREATE TABLE votacao (
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
 
-create table votos (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	primeiro DECIMAL,
-	segundo DECIMAL,
-	terceiro DECIMAL,
-	momento DATETIME,
-	fk_voto INT,
-	FOREIGN KEY (fk_voto) REFERENCES votacao(id)
+CREATE TABLE diretor (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR (50),
+dtNascimento DATE,
+filme VARCHAR (50)
 );
 
 

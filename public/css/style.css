@@ -209,14 +209,17 @@ margin-left:25%;
 
 .card {
   align-items: center;
-
-}
-
-.card {
+  transition: 0.2s;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+
 
 .card h2 {
   font-size: 20px;
@@ -269,7 +272,6 @@ button {
   flex-direction: column;
   align-items: center;
 }
-
 
 
 input {
@@ -426,6 +428,7 @@ input {
   margin-bottom: 5%;
   padding-bottom: 4%;
 }
+
 
 .questionario {
   display: flex;

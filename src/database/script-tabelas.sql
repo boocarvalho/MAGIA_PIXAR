@@ -13,14 +13,16 @@ CREATE TABLE votacao (
 	filme VARCHAR(50)
 );
 
-
-
-/* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
-
 CREATE TABLE usuario (
-id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR (50),
-filme VARCHAR (50)
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR (50)
+);
+
+CREATE TABLE VotacaoUsuario (
+fkid INT, FOREIGN KEY (fkid) REFERENCES votacao (id),
+fkUsuario INT, FOREIGN KEY (fkUsuario) REFERENCES usuario (idUsuario),
+PRIMARY KEY (fkid,fkUsuario),
+votos INT
 );
 
 
@@ -36,13 +38,14 @@ CREATE TABLE votacao (
 	filme VARCHAR(50)
 );
 
-
-
-/* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
-
 CREATE TABLE usuario (
-id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR (50),
-filme VARCHAR (50)
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR (50)
 );
 
+CREATE TABLE VotacaoUsuario (
+fkid INT, FOREIGN KEY (fkid) REFERENCES votacao (id),
+fkUsuario INT, FOREIGN KEY (fkUsuario) REFERENCES usuario (idUsuario),
+PRIMARY KEY (fkid,fkUsuario),
+votos INT
+);
